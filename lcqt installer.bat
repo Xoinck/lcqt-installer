@@ -18,14 +18,14 @@ cls
 echo                   LCQT Installer
 echo                   made by n3ssli
 echo            1. Install LCQT to .lunarclient
-echo            2. Exit
-echo            3. Uninstall .lunarclient
+echo            2. Uninstall .lunarclient
+echo            3. Exit
 
 REM Use choice command to get user input with empty prompt
 choice /c 123 /n /m ""
 
-if errorlevel 3 goto Uninstall
-if errorlevel 2 goto exit
+if errorlevel 3 goto exit
+if errorlevel 2 goto Uninstall
 if errorlevel 1 goto DownloadAndExtract
 
 :DownloadAndExtract
